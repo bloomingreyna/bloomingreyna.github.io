@@ -9,8 +9,8 @@ div#home-banner {
 }
 
 img#home-banner-logo {
-    width: 15rem;
-    height: 15rem;
+    width: 20cqw;
+    aspect-ratio: 1;
     position: relative;
     top: 2.7rem;
 }
@@ -28,13 +28,13 @@ div#home-banner-text {
 
 h1#home-banner-title {
     -webkit-text-stroke: 0.5mm black;
-    font-size: 4rem;
+    font-size: 5cqw;
     margin-bottom: -1rem;
 }
 
 h2#home-banner-subtitle {
     -webkit-text-stroke: 0.25mm black;
-    font-size: 1.75rem;
+    font-size: 2.25cqw;
 }
 
 div#about-us {
@@ -104,15 +104,18 @@ h1#specials-title {
     color: white;
     position: absolute;
     top: 0px;
-    font-size: 3.5rem;
+    margin-top: 1rem;
+    font-size: 12.5cqmin;
     -webkit-text-stroke: 0.45mm black;
+    text-wrap-mode: nowrap;
 }
 
 div.special-box {
     width: 40%;
-    padding-top: 2.5rem;
-    padding-bottom: -0.5rem;
+    aspect-ratio: 1.5;
+    padding-top: 2rem;
     padding-inline: 2rem;
+    gap: 0.2rem;
     position: relative;
     background-color: rgba(86, 86, 86, 0.3);
     backdrop-filter: blur(0.25mm);
@@ -130,7 +133,7 @@ div.special-box:hover {
 }
 
 img.special-img {
-    width: 70%;
+    width: 25cqw;
     aspect-ratio: 1.5;
     border-radius: 5mm;
     border: 1mm rgb(239, 214, 52) solid;
@@ -138,5 +141,20 @@ img.special-img {
 
 div.special-book {
     position: absolute;
+    width: 40%;
+    font-size: 3cqw;
     bottom: -1.55rem;
+}
+
+h1.special-header {
+    color: white;
+    font-size: 3cqw;
+    text-wrap-mode: nowrap;
+}
+
+p.special-paragraph {
+    color: white;
+    position: relative;
+    bottom: 1.5rem;
+    font-size: 2cqw;
 }

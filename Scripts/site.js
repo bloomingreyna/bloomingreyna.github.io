@@ -6,13 +6,14 @@ class SiteHeader extends HTMLElement {
     this.innerHTML = `
       <header class="site-header">
         <h1 class="site-header"><a href="https://www.weldiscleaning.com">Weldi's Cleaning</a></h1>
-        <div id="header-empty-separator" class="site-header"></div>
+        <div id="header-empty-separator" class="site-header" style="min-width: 4rem"></div>
         <div id="menu-icons" class="site-header">
-            <h3 class="site-header" >HOME</h3>
-            <h3 class="site-header" ><a href="Pages/services.html" target="_self">SERVICES</a></h3>
+            <h3 class="site-header">HOME</h3>
+            <h3 class="site-header"><a href="/Pages/services.html" target="_self">SERVICES</a></h3>
             <h3 class="site-header" >SERVICE AREAS</h3>
             <h3 class="site-header" >BOOK ONLINE</h3>
         </div>
+        <img id="expand-menu-icon" class="site-header" src="/Images/chevchev.webp">
     </header>
     `;
   }
