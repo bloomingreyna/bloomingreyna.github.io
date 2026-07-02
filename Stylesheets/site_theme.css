@@ -91,6 +91,7 @@ div.floating-section {
     box-shadow: 0mm 0mm 2mm black;
     border-radius: 5mm;
     border: 1mm rgb(239, 214, 52) solid;
+    position: relative;
 }
 
 div.slideshow-button {
@@ -102,6 +103,7 @@ div.slideshow-button {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    box-shadow: 0mm 0mm 2mm black;
 }
 
 img.slide-left {

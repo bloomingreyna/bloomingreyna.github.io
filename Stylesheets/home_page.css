@@ -79,7 +79,6 @@ div#about-us-textbox {
 }
 
 div#about-us-slideshow {
-    position: relative;
     width: 40%;
     aspect-ratio: 1.65;
     display: flex;
@@ -94,14 +93,14 @@ div#about-us-slideshow {
 div#about-us-slide-left {
     width: 3rem;
     height: 3rem;
-    left: 2%;
+    left: -1.8rem;
     border-radius: 3rem;
 }
 
 div#about-us-slide-right {
     width: 3rem;
     height: 3rem;
-    right: 2%;
+    right: -1.8rem;
     border-radius: 3rem;
     transform: rotate(90);
 }
