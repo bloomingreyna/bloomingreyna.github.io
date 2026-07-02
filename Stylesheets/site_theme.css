@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Lovelo";
+    src: url(../Fonts/Lovelo-Black.woff2);
+}
+
+header.site-header {
+    background-color: rgb(20, 24, 50, 0.7);
+    backdrop-filter: blur(0.75mm);
+    color: rgb(239, 214, 52);
+    border: rgb(239, 214, 52) 1mm solid;
+    border-radius: 2rem;
+    box-shadow: 0mm 0mm 1mm black;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+
+    width: auto;
+    height: 4rem;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    z-index: 1;
+}
+
+h1.site-header {
+    cursor: pointer;
+    text-wrap-mode: nowrap;
+}
+
+div#menu-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+div#header-empty-separator {
+    min-width: 4rem;
+    height: 4rem;
+}
+
+h3.site-header {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    text-wrap-mode: nowrap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Lovelo;
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html, body {
+    background-color: rgb(244, 252, 255);
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+.banner {
+    background-attachment: fixed;
+    width: 100%;
+    border-bottom: 1mm rgb(239, 214, 52) solid;
+    box-shadow: 0mm 0mm 1mm black;
+}
+
+a.stretched-link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+div.floating-section {
+    box-shadow: 0mm 0mm 2mm black;
+    border-radius: 5mm;
+    border: 1mm rgb(239, 214, 52) solid;
+}
+
+div.slideshow-button {
+    background-color: rgba(20, 24, 50, 0.5);
+    backdrop-filter: blur(0.75mm);
+    border: 1mm rgb(239, 214, 52) solid;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+img.slide-left {
+    transform: rotate(-90deg);
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    left: -0.15rem;
+    filter: brightness(0) saturate(100%) invert(97%) sepia(93%) saturate(1492%) hue-rotate(331deg) brightness(103%) contrast(87%);
+}
+
+img.slide-right {
+    transform: rotate(90deg);
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    left: 0.15rem;
+    filter: brightness(0) saturate(100%) invert(97%) sepia(93%) saturate(1492%) hue-rotate(331deg) brightness(103%) contrast(87%);
+}
