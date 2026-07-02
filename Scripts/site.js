@@ -18,6 +18,8 @@ function slideshowHoverBehavior(slideshow, button1, button2) {
     var b2 = document.getElementById(button2);
     b1.style.backgroundColor = "rgba(51, 60, 122, 0.5)";
     b2.style.backgroundColor= "rgba(51, 60, 122, 0.5)";
+    b1.style.boxShadow = "0mm 0mm 3.5mm black";
+    b2.style.boxShadow = "0mm 0mm 3.5mm black";
     slideshow.style.boxShadow = "0mm 0mm 10mm black";
 }
 
@@ -26,6 +28,8 @@ function slideshowIdleBehavior(slideshow, button1, button2) {
     var b2 = document.getElementById(button2);
     b1.style.backgroundColor = "rgba(20, 24, 50, 0.5)";
     b2.style.backgroundColor= "rgba(20, 24, 50, 0.5)";
+    b1.style.boxShadow = "0mm 0mm 2mm black";
+    b2.style.boxShadow = "0mm 0mm 2mm black";
     slideshow.style.boxShadow = "0mm 0mm 2mm black";
 }
 
