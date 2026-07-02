@@ -43,7 +43,7 @@ h2#home-banner-subtitle {
     font-size: 1.75rem;
 }
 
-div#book-button {
+div.book-button {
     color: rgb(239, 214, 52);
     background-color: rgb(10, 22, 98);
     font-size: 2.25rem;
@@ -63,19 +63,14 @@ div#book-button {
 }
 
 div#about-us {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 7.5%;
 }
 
 div#about-us-textbox {
     width: 42%;
     padding-inline: 2rem;
-    padding-block: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.75rem;
 }
 
 div#about-us-slideshow {
@@ -103,4 +98,57 @@ div#about-us-slide-right {
     right: -1.8rem;
     border-radius: 3rem;
     transform: rotate(90);
+}
+
+div#specials {
+    position: relative;
+    gap: 7.5%;
+    margin-top: 2.75rem;
+    margin-inline: 0px;
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+    padding-inline: 5rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35)), url(../Images/hedges.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border-top: 1mm rgb(239, 214, 52) solid;
+    border-bottom: 1mm rgb(239, 214, 52) solid;
+    box-shadow: 0mm 0mm 1mm black;
+}
+
+h1#specials-title {
+    color: white;
+    position: absolute;
+    top: 0px;
+    font-size: 3.5rem;
+    -webkit-text-stroke: 0.45mm black;
+}
+
+div.special-box {
+    width: 40%;
+    height: 20rem;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+    padding-inline: 2rem;
+    position: relative;
+    background-color: rgba(86, 86, 86, 0.3);
+    backdrop-filter: blur(0.75mm);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+img.special-img {
+    width: 70%;
+    aspect-ratio: 1.5;
+    border-radius: 5mm;
+    border: 1mm rgb(239, 214, 52) solid;
+}
+
+div.special-book {
+    position: absolute;
+    bottom: -1.55rem;
 }

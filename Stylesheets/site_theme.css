@@ -4,11 +4,11 @@
 }
 
 header.site-header {
-    background-color: rgb(20, 24, 50, 0.7);
+    background-color: rgba(20, 24, 50, 0.7);
     backdrop-filter: blur(0.75mm);
     color: rgb(239, 214, 52);
     border: rgb(239, 214, 52) 1mm solid;
-    border-radius: 2rem;
+    border-radius: 4rem;
     box-shadow: 0mm 0mm 1mm black;
 
     display: flex;
@@ -85,6 +85,15 @@ a.stretched-link {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+div.section {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div.floating-section {
