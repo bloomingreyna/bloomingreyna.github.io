@@ -1,17 +1,11 @@
 div#home-banner {
-    margin-top: 0px;
-    padding-top: 0px;
     height: 30rem;
     background-image: linear-gradient(rgba(0, 0, 0, 0.35)), url(../Images/hedges.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
-
-    z-index: 0;
 }
 
 img#home-banner-logo {
@@ -43,25 +37,6 @@ h2#home-banner-subtitle {
     font-size: 1.75rem;
 }
 
-div.book-button {
-    color: rgb(239, 214, 52);
-    background-color: rgb(10, 22, 98);
-    font-size: 2.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-    position: relative;
-    bottom: 1.55rem;
-    width: 12.5rem;
-    height: 2.5rem;
-    text-wrap-mode: nowrap;
-    border: 1mm rgb(239, 214, 52) solid;
-    border-radius: 2rem;
-    cursor: pointer;
-    box-shadow: 0mm 0mm 1mm black;
-}
-
 div#about-us {
     gap: 7.5%;
 }
@@ -76,13 +51,11 @@ div#about-us-textbox {
 div#about-us-slideshow {
     width: 40%;
     aspect-ratio: 1.65;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+}
 
-    background-image: url(../Images/dirtygutters.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+div#about-us-slideshow:hover {
+    width: 42%;
+    transition: width 0.2s;
 }
 
 div#about-us-slide-left {
@@ -90,6 +63,7 @@ div#about-us-slide-left {
     height: 3rem;
     left: -1.8rem;
     border-radius: 3rem;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 div#about-us-slide-right {
@@ -98,6 +72,14 @@ div#about-us-slide-right {
     right: -1.8rem;
     border-radius: 3rem;
     transform: rotate(90);
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+body:has(div#about-us-slideshow:hover) div#about-us-slide-left, 
+body:has(div#about-us-slideshow:hover) div#about-us-slide-right {
+    background-color: rgba(51, 60, 122, 0.5);
+    box-shadow: 0mm 0mm 5mm black;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 div#specials {
@@ -128,17 +110,23 @@ h1#specials-title {
 
 div.special-box {
     width: 40%;
-    height: 20rem;
     padding-top: 2.5rem;
-    padding-bottom: 4rem;
+    padding-bottom: -0.5rem;
     padding-inline: 2rem;
     position: relative;
     background-color: rgba(86, 86, 86, 0.3);
-    backdrop-filter: blur(0.75mm);
+    backdrop-filter: blur(0.25mm);
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    transition: box-shadow 0.2s, backdrop-filter 0.2s;
+}
+
+div.special-box:hover {
+    box-shadow: 0mm 0mm 5mm black;
+    backdrop-filter: blur(0.75mm);
+    transition: box-shadow 0.2s, backdrop-filter 0.2s;
 }
 
 img.special-img {

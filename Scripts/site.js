@@ -1,32 +1,26 @@
 var aboutUsSlide = Object(0);
 var slideIndexes = {aboutUs: aboutUsSlide};
 
+class SiteHeader extends HTMLElement {
+    connectedCallback() {
+    this.innerHTML = `
+      <header class="site-header">
+        <h1 class="site-header"><a href="https://www.weldiscleaning.com">Weldi's Cleaning</a></h1>
+        <div id="header-empty-separator" class="site-header"></div>
+        <div id="menu-icons" class="site-header">
+            <h3 class="site-header" >HOME</h3>
+            <h3 class="site-header" >SERVICES</h3>
+            <h3 class="site-header" >SERVICE AREAS</h3>
+            <h3 class="site-header" >BOOK ONLINE</h3>
+        </div>
+    </header>
+    `;
+  }
+}
+customElements.define("site-header", SiteHeader);
+
 function modulo(a, b) {
     return ((a % b) + b) % b;
-}
-
-function headerHoverBehavior(element) {
-    element.style.color = "white";
-}
-
-function headerIdleBehavior(element) {
-    element.style.color = "rgb(239, 214, 52)";
-}
-
-function slideshowHoverBehavior(slideshow, button1, button2) {
-    var b1 = document.getElementById(button1);
-    var b2 = document.getElementById(button2);
-    b1.style.backgroundColor = "rgba(51, 60, 122, 0.5)";
-    b2.style.backgroundColor= "rgba(51, 60, 122, 0.5)";
-    slideshow.style.boxShadow = "0mm 0mm 10mm black";
-}
-
-function slideshowIdleBehavior(slideshow, button1, button2) {
-    var b1 = document.getElementById(button1);
-    var b2 = document.getElementById(button2);
-    b1.style.backgroundColor = "rgba(20, 24, 50, 0.5)";
-    b2.style.backgroundColor= "rgba(20, 24, 50, 0.5)";
-    slideshow.style.boxShadow = "0mm 0mm 2mm black";
 }
 
 function slideshowButtonClick(slideshowName, slideClass, slideIndex, increment) {

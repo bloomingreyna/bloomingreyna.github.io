@@ -1,8 +1,14 @@
-function bookHoverBehavior(element) {
-    element.style.backgroundColor = "rgb(20, 24, 50)";
+var windowSpecial = document.getElementById("window-special");
+var carSpecial = document.getElementById("car-special");
+
+window.addEventListener("resize", sizeUpdates);
+
+function init() {
+    windowSpecial.style.height = window.getComputedStyle(carSpecial).height;
 }
 
-function bookIdleBehavior(element) {
-    element.style.backgroundColor = "rgb(10, 22, 98)";
-    element.style.color = "rgb(239, 214, 52)";
+function sizeUpdates() {
+    windowSpecial.style.height = window.getComputedStyle(carSpecial).height;
 }
+
+init()

@@ -5,7 +5,7 @@
 
 header.site-header {
     background-color: rgba(20, 24, 50, 0.7);
-    backdrop-filter: blur(0.75mm);
+    backdrop-filter: blur(0.1mm);
     color: rgb(239, 214, 52);
     border: rgb(239, 214, 52) 1mm solid;
     border-radius: 4rem;
@@ -27,11 +27,25 @@ header.site-header {
     padding-right: 2rem;
 
     z-index: 1;
+
+    transition: box-shadow 0.2s, backdrop-filter 0.2s;
+}
+
+header.site-header:hover {
+    box-shadow: 0mm 0mm 2mm black;
+    backdrop-filter: blur(0.75mm);
+    transition: box-shadow 0.2s, backdrop-filter 0.2s;
 }
 
 h1.site-header {
     cursor: pointer;
     text-wrap-mode: nowrap;
+    transition: font-size 0.2s;
+}
+
+h1.site-header:hover {
+    font-size: 2.1rem;
+    transition: font-size 0.2s;
 }
 
 div#menu-icons {
@@ -50,6 +64,38 @@ h3.site-header {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
     text-wrap-mode: nowrap;
+    transition: font-size 0.2s, color 0.2s;
+}
+
+h3.site-header:hover {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.2s, font-size 0.2s;
+}
+
+div.book-button {
+    color: rgb(239, 214, 52);
+    background-color: rgb(10, 22, 98);
+    font-size: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    position: relative;
+    bottom: 1.55rem;
+    width: 12.5rem;
+    height: 2.5rem;
+    text-wrap-mode: nowrap;
+    border: 1mm rgb(239, 214, 52) solid;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0mm 0mm 1mm black;
+    transition: background-color 0.2s;
+}
+
+div.book-button:hover {
+    background-color: rgb(20, 24, 50);
+    transition: background-color 0.2s;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,7 +107,11 @@ p {
 }
 
 html, body {
-    background-color: rgb(244, 252, 255);
+    background-image: linear-gradient(rgba(35, 46, 103, 0.2)), url(../Images/marble.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
     padding: 0px;
     margin: 0px;
 }
@@ -71,6 +121,11 @@ html, body {
     width: 100%;
     border-bottom: 1mm rgb(239, 214, 52) solid;
     box-shadow: 0mm 0mm 1mm black;
+    margin-top: 0px;
+    padding-top: 0px;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a.stretched-link {
@@ -100,6 +155,23 @@ div.floating-section {
     border-radius: 5mm;
     border: 1mm rgb(239, 214, 52) solid;
     position: relative;
+}
+
+div.slideshow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background-image: url(../Images/dirtygutters.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    transition: box-shadow 0.2s, width 0.2s;
+}
+
+div.slideshow:hover {
+    box-shadow: 0mm 0mm 5mm black;
+    transition: box-shadow 0.2s;
 }
 
 div.slideshow-button {

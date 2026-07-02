@@ -3,33 +3,25 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <base target="_blank">
         <title>Weldi's Cleaning</title>
 
         <link rel="stylesheet" href="Stylesheets/site_theme.css">
         <link rel="stylesheet" href="Stylesheets/home_page.css">
         
+        <script src="Scripts/site.js" defer></script>
+        <script src="Scripts/home_page.js" defer></script>
+
         <!-- About Us Slides -->
         <img class="about-us-slide" src="Images/dirtygutters.png" style="display: none">
         <img class="about-us-slide" src="Images/hedges.jpg" style="display: none">
         <img class="about-us-slide" src="Images/solarpanels.png" style="display:none">
         <img class="about-us-slide" src="Images/lawn.jpg" style="display:none">
         <img class="about-us-slide" src="Images/cockja.png" style="display:none">
-
-        <script src="Scripts/site.js" defer></script>
-        <script src="Scripts/home_page.js" defer></script>
     </head>
 
     <body>
-        <header class="site-header">
-            <h1 class="site-header"><a href="https://www.weldiscleaning.com">Weldi's Cleaning</a></h1>
-            <div id="header-empty-separator" class="site-header"></div>
-            <div id="menu-icons" class="site-header">
-                <h3 class="site-header" onmouseenter="headerHoverBehavior(this)" onmouseleave="headerIdleBehavior(this)">HOME</h3>
-                <h3 class="site-header" onmouseenter="headerHoverBehavior(this)" onmouseleave="headerIdleBehavior(this)">SERVICES</h3>
-                <h3 class="site-header" onmouseenter="headerHoverBehavior(this)" onmouseleave="headerIdleBehavior(this)">SERVICE AREAS</h3>
-                <h3 class="site-header" onmouseenter="headerHoverBehavior(this)" onmouseleave="headerIdleBehavior(this)">BOOK ONLINE</h3>
-            </div>
-        </header>
+        <site-header></site-header>
 
         <div id="home-banner" class="banner">
             <img id="home-banner-logo" src="Images/weldigold.png">
@@ -39,13 +31,13 @@
             </div>
         </div>
         
-        <div class="book-button" onmouseover="bookHoverBehavior(this)" onmouseout="bookIdleBehavior(this)">
+        <div class="book-button">
             <h6 class="book-text">BOOK NOW</h6>
             <a class="stretched-link" href="https://www.weldiscleaning.com/booking-calendar/free-quote"></a>
         </div>
 
         <div id="about-us" class="section">
-            <div id="about-us-slideshow" class="floating-section" style="background-color: white;" onmouseover="slideshowHoverBehavior(this, 'about-us-slide-left', 'about-us-slide-right')" onmouseout="slideshowIdleBehavior(this, 'about-us-slide-left', 'about-us-slide-right')">
+            <div id="about-us-slideshow" class="floating-section slideshow" style="background-color: white;">
                 <div id="about-us-slide-left" class="slideshow-button" onclick="slideshowButtonClick('about-us-slideshow', 'about-us-slide', 'aboutUs', -1)">
                     <img class="slide-left" src="Images/chevchev.webp">
                 </div>
@@ -69,27 +61,27 @@
         <div id="specials" class="section">
             <h1 id="specials-title">SPECIAL OFFERS</h1>
 
-            <div class="floating-section special-box">
+            <div id="window-special" class="floating-section special-box" >
                 <img class="special-img" src="Images/cockja.png">
                 <h1 style="color: white;">WINDOW CLEANING</h1>
                 <p style="color: white; position: relative; top: -2rem;">
                     Tired of stained, foggy windows? Tire no longer! We'll turn that 
                     glass crystal clear so you can enjoy the California sunshine.
                 </p>
-                <div class="book-button special-book" onmouseover="bookHoverBehavior(this)" onmouseout="bookIdleBehavior(this)">
+                <div class="book-button special-book">
                     <h6 class="book-text">BOOK NOW</h6>
                     <a class="stretched-link" href="https://www.weldiscleaning.com/booking-calendar/free-quote"></a>
                 </div>
             </div>
 
-            <div class="floating-section special-box">
+            <div id="car-special" class="floating-section special-box">
                 <img class="special-img" src="Images/car d.webp">
                 <h1 style="color: white;">AUTO DETAILING</h1>
                 <p style="color: white; position: relative; top: -2rem;">
                     Instead of going to a car wash, let the car wash come to you! Whether you need 
                     interior, exterior, or both, we'll make your car look good as new.
                 </p>
-                <div class="book-button special-book" onmouseover="bookHoverBehavior(this)" onmouseout="bookIdleBehavior(this)">
+                <div class="book-button special-book">
                     <h6 class="book-text">BOOK NOW</h6>
                     <a class="stretched-link" href="https://www.weldiscleaning.com/booking-calendar/free-quote"></a>
                 </div>
