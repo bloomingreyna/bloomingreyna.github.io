@@ -9,7 +9,7 @@ class SiteHeader extends HTMLElement {
         <div id="header-empty-separator" class="site-header"></div>
         <div id="menu-icons" class="site-header">
             <h3 class="site-header" >HOME</h3>
-            <h3 class="site-header" >SERVICES</h3>
+            <h3 class="site-header" ><a href="services.html" target="_self">SERVICES</a></h3>
             <h3 class="site-header" >SERVICE AREAS</h3>
             <h3 class="site-header" >BOOK ONLINE</h3>
         </div>
