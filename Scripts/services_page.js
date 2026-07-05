@@ -1,6 +1,7 @@
 const serviceDescriptions = document.getElementsByClassName("service-description-content");
 
 function switchToService(elementId) {
+    document.getElementById("service-description").scroll(0, 0);
     document.getElementById("service-description-intro").style.display = "none";
     for (var i = 0; i < serviceDescriptions.length; i++) {
         serviceDescriptions[i].style.display = "none";
