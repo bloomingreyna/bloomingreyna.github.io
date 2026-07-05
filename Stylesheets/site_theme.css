@@ -28,24 +28,25 @@ header.site-header {
 
     z-index: 1;
 
-    transition: box-shadow 0.2s, backdrop-filter 0.2s;
+    transition: box-shadow 0.2s, backdrop-filter 0.2s, transform 0.2s;
 }
 
 header.site-header:hover {
     box-shadow: 0mm 0mm 2mm black;
     backdrop-filter: blur(0.75mm);
-    transition: box-shadow 0.2s, backdrop-filter 0.2s;
+    transform: scale(1.01);
+    transition: box-shadow 0.2s, backdrop-filter 0.2s, transform 0.2s;
 }
 
 h1.site-header {
     cursor: pointer;
     text-wrap-mode: nowrap;
-    transition: font-size 0.2s;
+    transition: transform 0.2s;
 }
 
 h1.site-header:hover {
-    font-size: 2.1rem;
-    transition: font-size 0.2s;
+    transform: scale(1.05);
+    transition: transform 0.2s;
 }
 
 div#menu-icons {
@@ -63,21 +64,28 @@ h3.site-header {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
     text-wrap-mode: nowrap;
-    transition: font-size 0.2s, color 0.2s;
+    transition: transform 0.2s, color 0.2s;
 }
 
 h3.site-header:hover {
     color: white;
-    font-size: 1.2rem;
-    transition: color 0.2s, font-size 0.2s;
+    transform: scale(1.05);
+    transition: color 0.2s, transform 0.2s;
 }
 
 img#expand-menu-icon {
-    transform: rotate(180deg);
+    transform: rotate(-90deg);
     width: 2rem;
     margin-left: auto;
     filter: brightness(0) saturate(100%) invert(88%) sepia(37%) saturate(820%) hue-rotate(355deg) brightness(94%) contrast(100%);
-    display: none;
+    cursor: pointer;
+    transition: transform 0.35s, filter 0.2s;
+}
+
+img#expand-menu-icon:hover {
+    transform: scale(1.15) rotate(-90deg);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(78%) saturate(2%) hue-rotate(347deg) brightness(105%) contrast(101%);
+    transition: transform 0.35s, filter 0.2s;
 }
 
 div.book-button {
@@ -121,6 +129,8 @@ html, body {
     background-attachment: fixed;
     padding: 0px;
     margin: 0px;
+    font-size: 1rem;
+    scrollbar-color: rgb(239, 214, 52) black;
 }
 
 .banner {
@@ -133,6 +143,40 @@ html, body {
     z-index: 0;
     background-repeat: no-repeat;
     background-size: cover;
+
+    height: 48vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+img.banner-logo {
+    width: 20cqw;
+    aspect-ratio: 1;
+    position: relative;
+    top: 2.5rem;
+}
+
+div.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-wrap-mode: nowrap;
+    position: relative;
+}
+
+h1.banner-title {
+    -webkit-text-stroke: 0.5mm black;
+    font-size: 5cqw;
+    margin-bottom: -1rem;
+}
+
+h2.banner-subtitle {
+    -webkit-text-stroke: 0.25mm black;
+    font-size: 2.25cqw;
 }
 
 a.stretched-link {
@@ -169,7 +213,6 @@ div.slideshow {
     flex-direction: row;
     align-items: center;
 
-    background-image: url(../Images/dirtygutters.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
