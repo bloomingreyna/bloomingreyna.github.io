@@ -2,6 +2,9 @@ div#service-list {
     container-name: service-list-container;
     container-type: size;
     height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div#service-list-boxes {
