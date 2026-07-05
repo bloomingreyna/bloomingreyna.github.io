@@ -54,10 +54,18 @@ div#service-list-boxes {
     div#service-description {
         width: 50cqw;
         height: 75cqh;
-        background-color: white;
+        background-color: rgba(20, 24, 50, 0.7);
         padding-inline: 2rem;
         padding-block: 1.5rem;
         overflow: auto;
         scrollbar-color: rgb(195, 170, 10) transparent;
+        color: white;
+    }
+
+    img.service-description-image {
+        border: 1mm rgb(239, 214, 52) solid;
+        border-radius: 5mm;
+        width: 30cqw;
+        aspect-ratio: 1.5;
     }
 }

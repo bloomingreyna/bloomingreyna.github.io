@@ -121,6 +121,10 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+hr {
+    border-color: rgb(239, 214, 52);
+}
+
 html, body {
     background-image: linear-gradient(rgba(35, 46, 103, 0.2)), url(../Images/marble.jpg);
     background-repeat: no-repeat;
@@ -206,6 +210,12 @@ div.floating-section {
     border-radius: 5mm;
     border: 1mm rgb(239, 214, 52) solid;
     position: relative;
+}
+
+div.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div.slideshow {
