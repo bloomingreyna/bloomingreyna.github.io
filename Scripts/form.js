@@ -66,7 +66,6 @@ phoneInput.addEventListener("change", (event) => {
             behavior: "smooth"
         });
     }
-    cityInput.focus();
 });
 
 cityInput.addEventListener("change", (event) => {
