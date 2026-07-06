@@ -133,8 +133,19 @@ html, body {
     background-attachment: fixed;
     padding: 0px;
     margin: 0px;
-    font-size: clamp(10px, 1.5vw, 16px);
     scrollbar-color: rgb(239, 214, 52) black;
+}
+
+@media (min-width: 400px) {
+    html {
+        font-size: clamp(10px, 1.5vw, 16px);
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: clamp(4px, 1.5w, 10px);
+    }
 }
 
 .banner {
