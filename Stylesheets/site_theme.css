@@ -133,7 +133,7 @@ html, body {
     background-attachment: fixed;
     padding: 0px;
     margin: 0px;
-    font-size: 1rem;
+    font-size: clamp(10px, 1.5vw, 16px);
     scrollbar-color: rgb(239, 214, 52) black;
 }
 
