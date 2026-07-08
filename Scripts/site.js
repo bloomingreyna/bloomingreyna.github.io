@@ -5,7 +5,7 @@ class SiteHeader extends HTMLElement {
     connectedCallback() {
     this.innerHTML = `
       <header class="site-header">
-        <h1 class="site-header"><a href="/.refactor/Home/page.html">Weldi's Cleaning</a></h1>
+        <h1 class="site-header"><a href="/refactor/Home/page.html">Weldi's Cleaning</a></h1>
         <div id="header-empty-separator" class="site-header" style="min-width: 4rem"></div>
         <div id="menu-icons" class="site-header">
             <h3 class="site-header"><a href="/index.html" target="_self">HOME</a></h3>
