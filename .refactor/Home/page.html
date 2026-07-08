@@ -7,14 +7,69 @@
 
         <title>Weldi's Cleaning</title>
 
-        <link rel="stylesheet" href="../General/Stylesheets/site_style.css">
+        <link rel="stylesheet" href="../General/Stylesheets/main.css">
+        <link rel="stylesheet" href="intro_style.css">
 
-        <script src="../General/Scripts/site_script.js"></script>
+        <script src="../General/Scripts/custom_elements.js" defer></script>
+        <script src="script.js" defer></script>
     </head>
 
     <body>
-        <header id="site-header">
-            <h1>WELDI'S CLEANING</h1>
+        <header class="site-header">
+            <h1 class="site-header" style="margin-right: 1rem;"><a href="https://www.weldiscleaning.com">WELDI'S CLEANING</a></h1>
+            <h2 class="site-header">HOME</h2>
+            <h2 class="site-header">SERVICES</h2>
+            <h2 class="site-header">SERVICE AREAS</h2>
+            <h2 class="site-header">BOOK ONLINE</h2>
         </header>
+
+        <section class="page-banner" style="background-image: url(../General/Images/hedges.jpg);">
+            <img class="banner-element banner-logo" src="../General/Images/weldigold.png" alt="Weldi's Cleaning logo">
+            <div class="column-container banner-element" style="justify-content: center; align-items: center;">
+                <h1 class="banner-title">ELITE HOME + AUTO<br>CLEANING SERVICES</h1>
+                <h2 class="banner-subtitle">WINDOWS | CARS | SOLAR PANELS<br>GUTTERS | LAWNS | HEDGES</h2>
+            </div>
+        </section>
+
+        <section id="intro" style="gap: 20px;">
+            <div id="intro-textboxes" class="column-container" style="gap: inherit;">
+                <div id="intro-textbox" class="floating-box">
+                    <h1 class="floating-box">WE CLEAN, YOU RELAX.</h1>
+                    <hr class="floating-box">
+                    <p>When it comes to cleaning services, there's always a plethora of options to choose from. Never mind the choices available for just one type of cleaning, either—when the windows are done, who's going to detail your car? Weldi's Cleaning is here to help.<br><br>Formed and working in the Bay Area, we are simply unmatched when it comes to services and results. Whether you need your windows, car, or something else cleaned, Weldi's makes absolutely sure that your property ends up spotless.<br><br><i>We clean, you relax.</i></p>
+                </div>
+
+                <div id="call-to-action-column" class="floating-box">
+                    <h1 class="floating-box">INTERESTED?</h1>
+                    <hr class="floating-box">
+                    <p>If you're new here, feel free to check out our <a href="../Services/page.html"><u>services</u></a> and see what you like. Then, head on over to our <a href="../Booking/page.html"><u>booking form</u></a> to secure your <span style="color: rgb(239, 214, 52);">FREE</span> quote! We hope to see you soon!</p>
+                </div>
+            </div>
+            
+            <div id="dynamic-intro-box" style="display: flex; gap: inherit;">
+                <div id="call-to-action-row" class="floating-box">
+                    <h1 class="floating-box">INTERESTED?</h1>
+                    <hr class="floating-box">
+                    <p>If you're new here, feel free to check out our <a href="../Services/page.html"><u>services</u></a> and see what you like. Then, head on over to our <a href="../Booking/page.html"><u>booking form</u></a> to secure your <span style="color: rgb(239, 214, 52);">FREE</span> quote! We hope to see you soon!</p>
+                </div>
+                <img id="intro-image" src="../General/Images/joshcleans.png" alt="Weldi's employee cleaning a window">
+            </div>
+        </section>
+
+        <footer>
+            <div class="column-container" style="gap: 5px;">
+                <h1>SITE PAGES</h1>
+                <p><a href="">Home</a></p>
+                <p><a href="">Services</a></p>
+                <p><a href="">Service Areas</a></p>
+                <p><a href="">Book Online</a></p>
+            </div>
+
+            <div class="column-container" style="gap: 5px;">
+                <h1>CONTACT US</h1>
+                <p><b>Phone: </b>(408) 621-9929</p>
+                <p><b>Email: </b>weldiscleaning@gmail.com</p>
+            </div>
+        </footer>
     </body>
 </html>

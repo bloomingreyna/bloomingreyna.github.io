@@ -1,24 +1,51 @@
-@font-face {
-    font-family: "LOVELO";
-    src: url(../Fonts/Lovelo-Black.woff2);
+@import url(fonts.css);
+
+body {
+    background-image: linear-gradient(rgba(20, 24, 50, 0.45)), url(../Images/marble.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: LOVELO;
 }
 
-#site-header {
-    position: fixed;
+p {
+    font-family: Lato;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 247, 255);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 10px rgb(239, 214, 52) ridge;
+}
+
+footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7)), url(../Images/dirtygutters.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+    color: white;
+    font-style: normal;
 
     display: flex;
-    align-items: center;
+    gap: 40px;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    padding-inline: 5rem;
+}
 
-    background-color: rgba(20, 24, 50, 0.7);
-    color: rgb(239, 214, 52);
-
-    border-width: 16px;
-    border-color: rgb(239, 214, 52);
-    border-style: groove;
-
-    backdrop-filter: blur(0.1mm);
+footer a {
+    color: inherit;
 }

@@ -1,0 +1,53 @@
+#intro {
+    align-items: start;
+}
+
+#intro-image {
+    width: 40vw;
+    object-fit: cover;
+    object-position: left 20%;
+
+    margin-right: auto;
+
+    filter: saturate(250%);
+    
+    border-color: rgb(239, 214, 52);
+    border-width: 5px;
+    border-radius: 100vmin;
+    border-style: solid;
+
+    box-shadow: 0px 0px 5px black;
+}
+
+#call-to-action-row {
+    display: none;
+    margin-bottom: auto;
+    width: min-content;
+}
+
+@media (max-aspect-ratio: 3/2) {
+    #intro {
+        flex-direction: column;
+    }
+
+    #intro-textbox {
+        width: auto;
+    }
+
+    #call-to-action-column {
+        display: none;
+    }
+
+    #call-to-action-row {
+        display: block;
+    }
+
+    #dynamic-intro-box {
+        width: 100%;
+    }
+
+    #intro-image {
+        flex: 1;
+        min-width: 0px;
+    }
+}
