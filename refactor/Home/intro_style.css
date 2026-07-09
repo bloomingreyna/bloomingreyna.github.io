@@ -11,12 +11,11 @@
 
     filter: saturate(250%);
     
-    border-color: rgb(239, 214, 52);
-    border-width: 5px;
-    border-radius: 100vmin;
-    border-style: solid;
+    border-radius: 20px;
 
     box-shadow: 0px 0px 5px black;
+
+    transition: box-shadow 0.2s;
 }
 
 #call-to-action-row {

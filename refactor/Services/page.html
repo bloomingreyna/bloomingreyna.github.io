@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Weldi's Cleaning</title>
+
+        <link rel="stylesheet" href="../General/Stylesheets/main.css">
+        <link rel="stylesheet" href="services_style.css">
+
+        <script src="../General/Scripts/custom_elements.js" defer></script>
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <site-header></site-header>
+
+        <section class="page-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.25)), url(../General/Images/dirtygutters.png);">
+            <img class="banner-element banner-logo" src="../General/Images/weldigold.png" alt="Weldi's Cleaning logo">
+            <div class="column-container banner-element" style="justify-content: center; align-items: center;">
+                <h1 class="banner-title">OUR SERVICES</h1>
+                <h2 class="banner-subtitle"><i>WE CLEAN, YOU RELAX.</i></h2>
+            </div>
+        </section>
+
+        <section id="services" style="gap: 20px;">
+            <div id="services-column" class="column-container" style="gap: 5px;">
+                <div class="row-container" style="flex-wrap: wrap; gap: 5px; row-gap: 5px; justify-content: center;">
+                    <button onclick="switchToServiceTab(1)">WINDOWS</button>
+                    <button onclick="switchToServiceTab(2)">CARS</button>
+                    <button onclick="switchToServiceTab(3)">SOLAR PANELS</button>
+                    <button onclick="switchToServiceTab(4)">GUTTERS</button>
+                    <button onclick="switchToServiceTab(5)">LAWNS</button>
+                    <button onclick="switchToServiceTab(6)">HEDGES</button>
+                </div>
+                <div id="service-description-box" class="floating-box">
+                    <div class="service-content">
+                        <h1 class="floating-box">OUR SERVICES</h1>
+                        <hr class="floating-box">
+                        <p>This is our services page! Feel free to click on any of the above buttons to take a look at what we offer. Then, if you like what you see, head on over to our <a href="../Book_Online/page.html">booking form!</a></p>
+                    </div>
+                    <div class="service-content" style="display: none;">
+                        <h1 class="floating-box">WINDOW CLEANING</h1>
+                        <hr class="floating-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae non exercitationem voluptate sapiente quo nesciunt totam dolorum saepe nulla error! Sed consequuntur eligendi praesentium corrupti assumenda atque error necessitatibus quo.</p>
+                    </div>
+                    <div class="service-content" style="display: none;">
+                        <h1 class="floating-box">AUTO DETAILING</h1>
+                        <hr class="floating-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ullam repudiandae facere vel magni similique dolorem nihil delectus aut vitae, at illum natus ipsum. Ad est cumque fugiat voluptas illo.</p>
+                    </div>
+                    <div class="service-content" style="display: none;">
+                        <h1 class="floating-box">SOLAR PANEL CLEANING</h1>
+                        <hr class="floating-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aspernatur esse officia reiciendis provident culpa fuga perspiciatis, alias omnis! Dicta, dignissimos neque sapiente ipsa sint debitis repudiandae officiis quisquam nulla.</p>
+                    </div>
+                    <div class="service-content" style="display: none;">
+                        <h1 class="floating-box">GUTTER CLEANING</h1>
+                        <hr class="floating-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste totam voluptas sed numquam error? Est iste accusamus adipisci maxime consectetur. Natus reprehenderit porro labore quasi alias perspiciatis corporis sequi sapiente.</p>
+                    </div>
+                    <div class="service-content" style="display: none;">
+                        <h1 class="floating-box">LAWN CARE</h1>
+                        <hr class="floating-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nihil perferendis dolorem maiores molestias ipsum voluptas sed magnam voluptatibus, ipsa, reiciendis labore eum corporis perspiciatis sapiente esse quasi quos tempore.</p>
+                    </div>
+                    <div class="service-content" style="display: none;">
+                        <h1 class="floating-box">HEDGE TRIMMING</h1>
+                        <hr class="floating-box">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, consectetur maxime reiciendis quae obcaecati, quos tenetur consequuntur commodi rerum est corrupti? Ipsam unde earum, dolores dignissimos quisquam tempora voluptate necessitatibus?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

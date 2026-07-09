@@ -1,7 +1,7 @@
 @import url(fonts.css);
 
 body {
-    background-image: linear-gradient(rgba(20, 24, 50, 0.45)), url(../Images/marble.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85)), url(../Images/marble.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -26,7 +26,7 @@ section {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    border-bottom: 10px rgb(239, 214, 52) ridge;
+    border-bottom: 3px rgb(239, 214, 52) ridge;
 }
 
 footer {

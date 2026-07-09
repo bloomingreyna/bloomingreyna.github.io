@@ -1,0 +1,6 @@
+#services-column {
+    container-name: services-container;
+    container-type: inline-size;
+
+    width: 75%;
+}
