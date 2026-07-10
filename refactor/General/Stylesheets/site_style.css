@@ -5,7 +5,8 @@ html {
 }
 
 body {
-    background-image: linear-gradient(rgba(1, 0, 25, 0.85)), url(../Images/marble.jpg);
+    /* 1, 0, 25, 0.85 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85)), url(../Images/marble.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -52,11 +53,11 @@ section {
 
 input {
     border-width: 0px;
-    border-bottom-width: 1px;
+    border-bottom-width: 2px;
     border-color: rgb(239, 214, 52);
     border-style: solid;
 
-    background-color: rgba(38, 45, 88, 0.75);
+    background-color: rgba(87, 87, 87, 0.75);
     color: white;
 
     font-family: Lato;

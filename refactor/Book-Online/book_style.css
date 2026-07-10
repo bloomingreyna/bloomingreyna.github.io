@@ -1,17 +1,34 @@
+#form-box {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    column-gap: 20px;
+    row-gap: 20px;
+    width: min(30rem, 45vw);
+    text-wrap-mode: nowrap;
+}
+
+#summary-column {
+    flex: 1;
+    max-width: 20rem;
+}
+
 .checkbox-label {
     font-family: Lato;
     font-size: 0.85rem;
 }
 
-.checkbox {
-    width: 0.85rem;
-    aspect-ratio: 1;
+@media (max-aspect-ratio: 3/2) {
+    #form-box {
+        width: 85vw;
+    }
+
+    #summary-column {
+        max-width: 85vw;
+    }
 }
 
-.input-section {
-    display: flex;
-    gap: 5px;
-    flex-direction: column;
-
-    width: min(13.5rem, 95vw);
+@media (max-aspect-ratio: 9/16) {
+    #form-box {
+        grid-template-columns: auto;
+    }
 }

@@ -23,17 +23,17 @@ class SiteHeader extends HTMLElement {
                 <h2 class="site-header header-item" style="color: ${this.checkPage(this.servicesPath) ? "white" : "auto"};"><a href="../Services/page.html">SERVICES</a></h2>
                 <h2 class="site-header header-item" style="color: ${this.checkPage(this.serviceAreasPath) ? "white" : "auto"};">SERVICE AREAS</h2>
                 <h2 class="site-header header-item" style="color: ${this.checkPage(this.bookOnlinePath) ? "white" : "auto"};"><a href="../Book-Online/page.html">BOOK ONLINE</a></h2>
-                <img id="dropdown-arrow" class="site-header" src="../General/Images/chevchev.webp" alt="Menu dropdown">
+                <img id="dropdown-arrow" class="site-header" src="../General/Images/hamburger.webp" alt="Menu dropdown">
             </header>
             <div id="dropdown-menu" class="floating-box">
                 <div id="dropdown-hover-validation"></div>
-                <h2 site-header>HOME</h2>
+                <h2 class="site-header">HOME</h2>
                 <hr>
-                <h2 site-header>SERVICES</h2>
+                <h2 class="site-header">SERVICES</h2>
                 <hr>
-                <h2 site-header>SERVICE AREAS</h2>
+                <h2 class="site-header">SERVICE AREAS</h2>
                 <hr>
-                <h2 site-header>BOOK ONLINE</h2>
+                <h2 class="site-header">BOOK ONLINE</h2>
             </div>
         `;
     }
