@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Weldi's Cleaning - Book Online</title>
+        <link rel="shortcut icon" href="../General/Images/weldigold.png" type="image/x-icon">
+
+        <link rel="stylesheet" href="../General/Stylesheets/main.css">
+        <link rel="stylesheet" href="book_style.css">
+
+        <script src="../General/Scripts/custom_elements.js" defer></script>
+    </head>
+
+    <body>
+        <site-header></site-header>
+
+        <section class="page-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35)), url(../General/Images/car\ d.webp);">
+            <img class="banner-element banner-logo" src="../General/Images/weldigold.png" alt="">
+            <div class="column-container banner-element">
+                <h1 class="banner-title">BOOKING FORM</h1>
+                <h2 class="banner-subtitle"><i>We hope to see you soon!</i></h2>
+            </div>
+        </section>
+
+        <section id="booking-form">
+            <form target="_blank" action="" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                <div class="floating-box input-section">
+                    <label>First Name:</label>
+                    <input type="text" name="client-name" id="client-first-name-input">
+                    <br>
+                    <label>Last Name:</label>
+                    <input type="text" name="client-name" id="client-last-name-input">
+                    <br>
+                    <label>Street Address:</label>
+                    <input type="text" name="client-address" id="client-address-input">
+                </div>
+
+                <div class="floating-box input-section">
+                    <label>Email Address:</label>
+                    <input type="text" name="client-email" id="client-email-input">
+                    <br>
+                    <label>Phone #:</label>
+                    <input type="text" name="client-email" id="client-phone-number-input">
+                    <br>
+                    <div>
+                        <input class="checkbox" type="checkbox" name="window-box">
+                        <label class="checkbox-label">I consent to receiving calls and/or SMS messages. Data rates may apply.</label>
+                    </div>
+                </div>
+
+                <div class="floating-box input-section">
+                    <label>Desired Services:</label>
+                    <div>
+                        <input class="checkbox" type="checkbox" name="window-box">
+                        <label class="checkbox-label">Window Cleaning</label>
+                    </div>
+                    <div>
+                        <input class="checkbox" type="checkbox" name="window-box">
+                        <label class="checkbox-label">Auto Detailing</label>
+                    </div>
+                    <div>
+                        <input class="checkbox" type="checkbox" name="window-box">
+                        <label class="checkbox-label">Solar Panel Cleaning</label>
+                    </div>
+                    <div>
+                        <input class="checkbox" type="checkbox" name="window-box">
+                        <label class="checkbox-label">Gutter Cleaning</label>
+                    </div>
+                    <div>
+                        <input class="checkbox" type="checkbox" name="window-box">
+                        <label class="checkbox-label">Lawn Care</label>
+                    </div>
+                    <div>
+                        <input class="checkbox" type="checkbox" name="window-box">
+                        <label class="checkbox-label">Hedge Trimming</label>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <site-footer></site-footer>
+    </body>
+</html>

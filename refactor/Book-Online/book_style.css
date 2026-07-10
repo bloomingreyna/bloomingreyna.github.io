@@ -1,0 +1,17 @@
+.checkbox-label {
+    font-family: Lato;
+    font-size: 0.85rem;
+}
+
+.checkbox {
+    width: 0.85rem;
+    aspect-ratio: 1;
+}
+
+.input-section {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+
+    width: min(13.5rem, 95vw);
+}

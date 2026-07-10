@@ -5,19 +5,24 @@ html {
 }
 
 body {
-    background-image: linear-gradient(rgba(2, 9, 16, 0.85)), url(../Images/marble.jpg);
+    background-image: linear-gradient(rgba(1, 0, 25, 0.85)), url(../Images/marble.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, label {
     font-family: LOVELO;
 }
 
 p, li {
     font-family: Lato;
     color: white;
+}
+
+label {
+    color: white;
+    font-size: 1.25rem;
 }
 
 .rainbow-text {
@@ -43,6 +48,22 @@ section {
     align-items: center;
     padding: 1rem;
     border-bottom: 3px rgb(239, 214, 52) ridge;
+}
+
+input {
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-color: rgb(239, 214, 52);
+    border-style: solid;
+
+    background-color: rgba(38, 45, 88, 0.75);
+    color: white;
+
+    font-family: Lato;
+    font-size: 1rem;
+
+    padding-block: 0.25rem;
+    padding-inline: 0.5rem;
 }
 
 footer {

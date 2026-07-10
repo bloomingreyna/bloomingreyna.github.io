@@ -12,7 +12,7 @@
 
 @container service-content-container {
     .service-content-description > img {
-        width: min(20rem, 30cqw);
+        width: min(20rem, 45cqw);
         height: 20rem;
         object-fit: cover;
         border-radius: 20px;
@@ -31,7 +31,7 @@
 
     @container service-content-container {
         .service-content-description > img {
-            width: min(20rem, 75cqw);
+            width: min(20rem, 95cqw);
             height: 15rem;
             margin-left: 50cqw;
             transform: translateX(-50%);
