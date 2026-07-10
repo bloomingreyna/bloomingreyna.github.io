@@ -1,6 +1,40 @@
 #services-column {
-    container-name: services-container;
+    width: 75%;
+}
+
+.service-content-description {
+    container-name: service-content-container;
     container-type: inline-size;
 
-    width: 75%;
+    display: flex;
+    gap: 20px;
+}
+
+@container service-content-container {
+    .service-content-description > img {
+        width: min(20rem, 30cqw);
+        height: 20rem;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px black;
+    }
+
+    .service-content-description .column-container {
+        flex: 1;
+    }
+}
+
+@media (max-aspect-ratio: 3/2) {
+    .service-content-description {
+        flex-direction: column;
+    }
+
+    @container service-content-container {
+        .service-content-description > img {
+            width: min(20rem, 75cqw);
+            height: 15rem;
+            margin-left: 50cqw;
+            transform: translateX(-50%);
+        }
+    }
 }

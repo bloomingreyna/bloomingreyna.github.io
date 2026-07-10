@@ -38,19 +38,18 @@ button {
 }
 
 button:hover {
-    border-color: black;
-    background-color: white;
-    color: black;
+    background-color: rgb(11, 14, 36);
 
-    transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s;
 }
 
 div.floating-box {
-    /* border-width: 5px;
-    border-color: rgb(239, 214, 52);
+    /* border-width: 2px;
+    border-color: rgba(239, 214, 52, 0.75);
     border-style: solid;
+    border-radius: 6.7px;
     
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(20, 24, 50, 0.67);
     color: white;
 
     box-shadow: 0px 0px 5px black; */
@@ -58,10 +57,6 @@ div.floating-box {
     padding: 0.75rem;
 }
 
-h1.floating-box {
+h1.floating-box, h2.floating-box {
     color: rgb(239, 214, 52);
-}
-
-hr.floating-box {
-    border-color: rgb(239, 214, 52);
 }

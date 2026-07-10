@@ -1,5 +1,4 @@
 .site-header {
-    cursor: pointer;
     text-wrap-mode: nowrap;
     color: rgb(239, 214, 52);
 
@@ -31,11 +30,16 @@ header.site-header {
 
     backdrop-filter: blur(0.1mm);
 
-    cursor: default;
+    overflow-x: hidden;
 }
 
 header.site-header a {
     color: inherit;
+    text-decoration: none;
+}
+
+h1.site-header, h2.site-header, img.site-header {
+    cursor: pointer;
 }
 
 h2.site-header {
@@ -48,4 +52,23 @@ h2.site-header:hover {
     color: white;
 
     transition: transform 0.2s, color 0.2s;
+}
+
+img.site-header {
+    width: 2rem;
+    aspect-ratio: 1;
+
+    margin-left: auto;
+
+    filter: brightness(0) saturate(100%) invert(88%) sepia(37%) saturate(820%) hue-rotate(355deg) brightness(94%) contrast(100%);
+
+    transform: rotate(270deg);
+
+    transition: transform 0.2s;
+}
+
+img.site-header:hover {
+    transform: rotate(180deg);
+    
+    transition: transform 0.2s;
 }
