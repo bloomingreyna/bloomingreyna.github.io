@@ -21,60 +21,69 @@
 
         <section class="page-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35)), url(../General/Images/car\ d.webp);">
             <img class="banner-element banner-logo" src="../General/Images/weldigold.png" alt="">
-            <div class="column-container banner-element">
+            <div class="column-container banner-element" style="justify-content: center; align-items: center;">
                 <h1 class="banner-title">BOOKING FORM</h1>
                 <h2 class="banner-subtitle"><i>We hope to see you soon!</i></h2>
             </div>
         </section>
 
         <section id="booking-form">
-            <form id="form" action="" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <form id="form" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
                 <div id="form-box" class="floating-box">
                     <div class="column-container">
-                        <label>FIRST NAME:</label>
+                        <label>FIRST NAME<span style="color: red;"> *</span></label>
                         <input type="text" name="First Name" id="client-first-name-input">
+                        <p id="first-name-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">This field is required.</p>
                     </div>
                     <div class="column-container">
-                        <label>LAST NAME:</label>
+                        <label>LAST NAME<span style="color: red;"> *</span></label>
                         <input type="text" name="Last Name" id="client-last-name-input">
+                        <p id="last-name-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">This field is required.</p>
                     </div>
                     <div class="column-container">
-                        <label>EMAIL:</label>
+                        <label>EMAIL<span style="color: red;"> *</span></label>
                         <input type="text" name="Email" id="client-email-input">
+                        <p id="email-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">Invalid email address.</p>
                     </div>
                     <div class="column-container">
-                        <label>PHONE:</label>
-                        <input type="text" name="Phone" id="client-phone-number-input">
+                        <label>PHONE</label>
+                        <input type="tel" name="Phone" id="client-phone-number-input">
+                        <p id="phone-number-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">Invalid phone number.</p>
                     </div>
                     <div class="column-container">
-                        <label>ADDRESS:</label>
+                        <label>ADDRESS<span style="color: red;"> *</span></label>
                         <input type="text" name="Address" id="client-address-input">
+                        <p id="address-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">This field is required.</p>
                     </div>
-                    <div class="column-container" style="gap: 5px;">
-                        <label>SERVICES:</label>
-                        <div class="row-container">
-                            <input type="checkbox" name="Services" id="" value="Window Cleaning">
-                            <label class="checkbox-label">Window Cleaning</label>
-                        </div>
-                        <div class="row-container">
-                            <input type="checkbox" name="Services" id="" value="Auto Detailing">
-                            <label class="checkbox-label">Auto Detailing</label>
-                        </div>
-                        <div class="row-container">
-                            <input type="checkbox" name="" id="">
-                            <label class="checkbox-label">Solar Panel Cleaning</label>
-                        </div>
-                        <div class="row-container">
-                            <input type="checkbox" name="" id="">
-                            <label class="checkbox-label">Gutter Cleaning</label>
-                        </div>
-                        <div class="row-container">
-                            <input type="checkbox" name="" id="">
-                            <label class="checkbox-label">Lawn Care</label>
-                        </div>
-                        <div class="row-container">
-                            <input type="checkbox" name="" id="">
-                            <label class="checkbox-label">Hedge Trimming</label>
+                    <div class="column-container">
+                        <label>SERVICES<span style="color: red;"> *</span></label>
+                        <div id="checkbox-holder">
+                            <div class="row-container">
+                                <input class="service-check" type="checkbox" value="Window Cleaning">
+                                <label class="checkbox-label">Window Cleaning</label>
+                            </div>
+                            <div class="row-container">
+                                <input class="service-check" type="checkbox" value="Auto Detailing">
+                                <label class="checkbox-label">Auto Detailing</label>
+                            </div>
+                            <div class="row-container">
+                                <input class="service-check" type="checkbox" value="Solar Panel Cleaning">
+                                <label class="checkbox-label">Solar Panel Cleaning</label>
+                            </div>
+                            <div class="row-container">
+                                <input class="service-check" type="checkbox" value="Gutter Cleaning">
+                                <label class="checkbox-label">Gutter Cleaning</label>
+                            </div>
+                            <div class="row-container">
+                                <input class="service-check" type="checkbox" value="Lawn Care">
+                                <label class="checkbox-label">Lawn Care</label>
+                            </div>
+                            <div class="row-container">
+                                <input class="service-check" type="checkbox" value="Hedge Trimming">
+                                <label class="checkbox-label">Hedge Trimming</label>
+                            </div>
+                            <input id="services-value" name="Services" style="display: none;">
+                            <p id="service-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">Select at least one service.</p>
                         </div>
                     </div>
                 </div>
@@ -83,9 +92,26 @@
                     <div class=floating-box>
                         <h2 class="floating-box">ORDER SUMMARY</h1>
                         <hr>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore recusandae facere praesentium in excepturi temporibus cupiditate quos illo corporis porro harum maxime debitis, velit natus nihil repudiandae dolore, mollitia culpa.</p>
+                        <p>You are booking a quote for the following services:</p>
+                        <ul id="service-list">
+                            <li style="color: grey;"><i>No services selected...</i></li>
+                        </ul>
+                        <hr>
+                        <p>We will first contact you via your preferred mode of contact (email by default) and arrange details depending on your desired services. We will not come to your provided address without first explicitly communicating a date and time. It is also within your legal rights to refuse the estimate you receive at any point <i>before</i> receiving the service.</p>
+                        <br>
+                        <p>We hope to see you soon!</p>
                     </div>
-                    <button id="submit-button" type="submit" style="width: 10rem">SUBMIT</button>
+                    <div class="row-container">
+                        <input id="prefers-phone" type="checkbox">
+                        <input id="prefers-phone-value" name="Prefers Phone Communication" style="display: none;">
+                        <label class="checkbox-label">I would prefer to communicate via phone call and/or text messaging (standard data rates may apply).</label>
+                    </div>
+                    <button id="submit-button" type="submit" style="width: 10rem; height: 3.25rem;">SUBMIT</button>
+                    <div id="error-box">
+                        <p>The following fields are invalid:</p>
+                        <hr style="border-color: rgb(148, 11, 11);">
+                        <ul id="error-fields"></ul>
+                    </div>
                 </div>
             </form>
         </section>

@@ -1,10 +1,18 @@
 #form-box {
     display: grid;
+    justify-content: center;
     grid-template-columns: 45% 45%;
     column-gap: 20px;
     row-gap: 20px;
-    width: min(30rem, 45vw);
+    width: 50vw;
+    height: min-content;
     text-wrap-mode: nowrap;
+}
+
+#checkbox-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 #summary-column {
@@ -15,20 +23,53 @@
 .checkbox-label {
     font-family: Lato;
     font-size: 0.85rem;
+    margin-left: 0.2rem;
+}
+
+.input-error {
+    color: red;
+    font-size: 0.85rem;
+    display: none;
+    margin-top: 10px;
+}
+
+.error-img {
+    width: 0.85rem;
+    filter: brightness(0) saturate(100%) invert(17%) sepia(97%) saturate(6233%) hue-rotate(358deg) brightness(99%) contrast(112%);
+
+    position: relative;
+    top: 0.05rem;
+    margin-right: 0.35rem;
+}
+
+#error-box {
+    background-color: rgb(222, 57, 57);
+    padding: 1rem;
+    border-color: rgb(148, 11, 11);
+    border-radius: 6.7px;
+    border-width: 5px;
+    border-style: solid;
+    box-shadow: 0px 0px 5px black;
+    display: none;
 }
 
 @media (max-aspect-ratio: 3/2) {
     #form-box {
-        width: 85vw;
+        width: 95vw;
     }
 
     #summary-column {
-        max-width: 85vw;
+        max-width: 95vw;
     }
 }
 
 @media (max-aspect-ratio: 9/16) {
     #form-box {
         grid-template-columns: auto;
+    }
+
+    #checkbox-holder {
+        display: grid;
+        grid-template-columns: auto auto;
     }
 }
