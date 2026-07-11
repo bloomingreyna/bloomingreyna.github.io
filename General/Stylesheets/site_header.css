@@ -92,7 +92,7 @@ img.site-header {
     backdrop-filter: blur(2mm);
 
     position: fixed;
-    right: 2.5%;
+    right: calc(2.5% + 2rem);
     top: 5rem;
 
     width: min-content;
@@ -114,10 +114,11 @@ img.site-header {
     background-color: transparent;
 
     position: absolute;
-    width: 100%;
+    width: calc(100% + 2rem);
     height: 4.25rem;
 
     top: -4rem;
+    left: 0;
 }
 
 body:has(img.site-header:active) #dropdown-menu,
