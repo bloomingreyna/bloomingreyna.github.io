@@ -27,13 +27,13 @@ class SiteHeader extends HTMLElement {
             </header>
             <div id="dropdown-menu" class="floating-box">
                 <div id="dropdown-hover-validation"></div>
-                <h2 class="site-header">HOME</h2>
+                <h2 class="site-header" style="color: ${this.checkPage(this.homePath) ? "white" : "auto"};"><a href="../Home/page.html">HOME</a></h2>
                 <hr>
-                <h2 class="site-header">SERVICES</h2>
+                <h2 class="site-header" style="color: ${this.checkPage(this.servicesPath) ? "white" : "auto"};"><a href="../Services/page.html">SERVICES</a></h2>
                 <hr>
-                <h2 class="site-header">SERVICE AREAS</h2>
+                <h2 class="site-header" style="color: ${this.checkPage(this.serviceAreasPath) ? "white" : "auto"};">SERVICE AREAS</h2>
                 <hr>
-                <h2 class="site-header">BOOK ONLINE</h2>
+                <h2 class="site-header" style="color: ${this.checkPage(this.bookOnlinePath) ? "white" : "auto"};"><a href="../Book-Online/page.html">BOOK ONLINE</a></h2>
             </div>
         `;
     }

@@ -59,7 +59,11 @@
     }
 
     #summary-column {
-        max-width: 95vw;
+        max-width: 85vw;
+    }
+
+    #preference-label {
+        max-width: 65vw;
     }
 }
 
