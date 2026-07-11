@@ -1,5 +1,5 @@
 class SiteHeader extends HTMLElement {
-    homePath = "/docs/index.html";
+    homePath = "/index.html";
     servicesPath = "/docs/services.html";
     serviceAreasPath = "/docs/service-areas.html";
     bookOnlinePath = "/docs/book-online.html";
@@ -19,7 +19,7 @@ class SiteHeader extends HTMLElement {
         this.innerHTML = `
             <header id="site-header" class="site-header">
                 <h1 class="site-header" style="margin-right: 1rem;"><a href="https://www.weldiscleaning.com">WELDI'S CLEANING</a></h1>
-                <h2 class="site-header header-item" style="color: ${this.checkPage(this.homePath) ? "white" : "auto"};"><a href="/docs/index.html">HOME</a></h2>
+                <h2 class="site-header header-item" style="color: ${this.checkPage(this.homePath) ? "white" : "auto"};"><a href="/index.html">HOME</a></h2>
                 <h2 class="site-header header-item" style="color: ${this.checkPage(this.servicesPath) ? "white" : "auto"};"><a href="/docs/services.html">SERVICES</a></h2>
                 <h2 class="site-header header-item" style="color: ${this.checkPage(this.serviceAreasPath) ? "white" : "auto"};">SERVICE AREAS</h2>
                 <h2 class="site-header header-item" style="color: ${this.checkPage(this.bookOnlinePath) ? "white" : "auto"};"><a href="/docs/book-online.html">BOOK ONLINE</a></h2>
@@ -27,7 +27,7 @@ class SiteHeader extends HTMLElement {
             </header>
             <div id="dropdown-menu" class="floating-box">
                 <div id="dropdown-hover-validation"></div>
-                <h2 class="site-header" style="color: ${this.checkPage(this.homePath) ? "white" : "auto"};"><a href="/docs/index.html">HOME</a></h2>
+                <h2 class="site-header" style="color: ${this.checkPage(this.homePath) ? "white" : "auto"};"><a href="/index.html">HOME</a></h2>
                 <hr>
                 <h2 class="site-header" style="color: ${this.checkPage(this.servicesPath) ? "white" : "auto"};"><a href="/docs/services.html">SERVICES</a></h2>
                 <hr>
@@ -50,7 +50,7 @@ class SiteFooter extends HTMLElement {
             <footer>
                 <div class="column-container" style="gap: 5px;">
                     <h1>SITE PAGES</h1>
-                    <p><a href="/docs/index.html">Home</a></p>
+                    <p><a href="/index.html">Home</a></p>
                     <p><a href="/docs/services.html">Services</a></p>
                     <p><a href="">Service Areas</a></p>
                     <p><a href="/docs/book-online.html">Book Online</a></p>
