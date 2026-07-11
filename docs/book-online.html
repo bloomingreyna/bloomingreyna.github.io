@@ -30,32 +30,37 @@
         <section id="booking-form">
             <form id="form" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
                 <div id="form-box" class="floating-box">
-                    <div class="column-container">
+                    <div class="column-container long-span">
                         <label>FIRST NAME<span style="color: red;"> *</span></label>
                         <input type="text" name="First Name" id="client-first-name-input">
                         <p id="first-name-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">This field is required.</p>
                     </div>
-                    <div class="column-container">
+                    <div class="column-container long-span">
                         <label>LAST NAME<span style="color: red;"> *</span></label>
                         <input type="text" name="Last Name" id="client-last-name-input">
                         <p id="last-name-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">This field is required.</p>
                     </div>
-                    <div class="column-container">
+                    <div class="column-container long-span">
                         <label>EMAIL<span style="color: red;"> *</span></label>
                         <input type="text" name="Email" id="client-email-input">
                         <p id="email-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">Invalid email address.</p>
                     </div>
-                    <div class="column-container">
+                    <div class="column-container long-span">
+                        <label>CONFIRM EMAIL<span style="color: red;"> *</span></label>
+                        <input type="text" id="client-confirm-email-input">
+                        <p id="confirm-email-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">Emails must match.</p>
+                    </div>
+                    <div class="column-container long-span">
                         <label>PHONE</label>
                         <input type="tel" name="Phone" id="client-phone-number-input">
                         <p id="phone-number-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">Invalid phone number.</p>
                     </div>
-                    <div class="column-container">
+                    <div class="column-container long-span">
                         <label>ADDRESS<span style="color: red;"> *</span></label>
                         <input type="text" name="Address" id="client-address-input">
                         <p id="address-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">This field is required.</p>
                     </div>
-                    <div class="column-container">
+                    <div class="column-container short-span">
                         <label>SERVICES<span style="color: red;"> *</span></label>
                         <div id="checkbox-holder">
                             <div class="row-container">
@@ -83,8 +88,8 @@
                                 <label class="checkbox-label">Hedge Trimming</label>
                             </div>
                             <input id="services-value" name="Services" style="display: none;">
-                            <p id="service-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">Select at least one service.</p>
                         </div>
+                        <p id="service-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">Select at least one service.</p>
                     </div>
                 </div>
 

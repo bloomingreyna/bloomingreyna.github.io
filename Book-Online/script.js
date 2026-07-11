@@ -15,6 +15,10 @@ const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0
 const emailError = document.getElementById("email-error");
 var validEmail = false;
 
+const confirmEmail = document.getElementById("client-confirm-email-input");
+const confirmEmailError = document.getElementById("confirm-email-error");
+var validConfirmEmail = false;
+
 const phone = document.getElementById("client-phone-number-input");
 const phoneRegex = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
 const phoneError = document.getElementById("phone-number-error");
@@ -41,25 +45,19 @@ form.addEventListener('submit', e => {
     submitButton.disabled = true;
     e.preventDefault();
 
-    if (!validFirstName || !validLastName || !validEmail || !validPhone || !validAddress || !serviceSelected) {
+    if (!validFirstName || !validLastName || !validEmail || !validConfirmEmail || !validPhone || !validAddress || !serviceSelected) {
         errorBox.style.display = "block";
-        errorFields.innerHTML = `
-            ${!validFirstName ? "<li>First Name</li>" : ""}
-            ${!validLastName ? "<li>Last Name</li>" : ""}
-            ${!validEmail ? "<li>Email</li>" : ""}
-            ${!validPhone ? "<li>Phone Number</li>" : ""}
-            ${!validAddress ? "<li>Address</li>" : ""}
-            ${!serviceSelected ? "<li>Services</li>" : ""}
-        `;
+        setErrorBoxInnerHTML();
         submitButton.disabled = false;
         return;
     }
     errorBox.style.display = "none";
 
     let requestBody = new FormData(form);
+    
     submitButton.innerHTML = "SUBMITTING..."
     submitButton.style.fontSize = "1rem";
-    fetch(scriptURL, { method: 'POST', body: requestBody })
+    fetch(scriptURL, {method: 'POST', body: requestBody})
     .then(response => {
         alert('Booking form submitted! Please check your email for confirmation.\n\nDismiss this message to go back to the home page.', response);
         window.location.replace("/index.html");
@@ -90,6 +88,8 @@ firstName.addEventListener("change", (event) => {
         firstNameError.style.display = "block";
         validFirstName = false;
     }
+
+    setErrorBoxInnerHTML();
 });
 
 lastName.addEventListener("change", (event) => {
@@ -99,6 +99,8 @@ lastName.addEventListener("change", (event) => {
         lastNameError.style.display = "block";
         validLastName = false;
     }
+
+    setErrorBoxInnerHTML();
 });
 
 email.addEventListener("change", (event) => {
@@ -110,8 +112,39 @@ email.addEventListener("change", (event) => {
         validEmail = false;
     } else if (email.value === "") {
         emailError.innerHTML = `<img class="error-img" src="../General/Images/alert-error.svg">This field is required.`;
+        emailError.style.display = "block";
+        validEmail = false;
     }
+
+    validConfirmEmail = true;
+    if (confirmEmail.value !== email.value && confirmEmail.value !== "") {
+        confirmEmailError.innerHTML = `<img class="error-img" src="../General/Images/alert-error.svg">Emails must match.`;
+        confirmEmailError.style.display = "block";
+        validConfirmEmail = false;
+    } else if (confirmEmail.value === "") {
+        validConfirmEmail = false;
+    } else if (confirmEmail.value === email.value) {
+        confirmEmailError.style.display = "none";
+    }
+
+    setErrorBoxInnerHTML();
 });
+
+confirmEmail.addEventListener("change", (event) => {
+    confirmEmailError.style.display = "none";
+    validConfirmEmail = true;
+    if (confirmEmail.value !== email.value && confirmEmail.value !== "") {
+        confirmEmailError.innerHTML = `<img class="error-img" src="../General/Images/alert-error.svg">Emails must match.`;
+        confirmEmailError.style.display = "block";
+        validConfirmEmail = false;
+    } else if (confirmEmail.value === "") {
+        confirmEmailError.innerHTML = `<img class="error-img" src="../General/Images/alert-error.svg">This field is required.`;
+        confirmEmailError.style.display = "block";
+        validConfirmEmail = false;
+    }
+
+    setErrorBoxInnerHTML();
+})
 
 phone.addEventListener("change", (event) => {
     phoneError.style.display = "none";
@@ -121,6 +154,8 @@ phone.addEventListener("change", (event) => {
         phoneError.style.display = "block";
         validPhone = false;
     }
+
+    setErrorBoxInnerHTML();
 });
 
 address.addEventListener("change", (event) => {
@@ -130,6 +165,8 @@ address.addEventListener("change", (event) => {
         addressError.style.display = "block";
         validAddress = false;
     }
+
+    setErrorBoxInnerHTML();
 });
 
 for (var i = 0; i < serviceCheckboxes.length; i++) {
@@ -158,9 +195,27 @@ for (var i = 0; i < serviceCheckboxes.length; i++) {
         } else {
             serviceErrorMsg.style.display = "none";
         }
+
+        setErrorBoxInnerHTML();
     });
 }
 
 prefersPhone.addEventListener("change", (event) => {
     prefersPhoneValue.value = prefersPhone.checked ? "Yes" : "No";
 })
+
+function setErrorBoxInnerHTML() {
+    if (validFirstName && validLastName && validEmail && validConfirmEmail && validPhone && validAddress && serviceSelected) {
+        errorBox.style.display = "none";
+        return;
+    }
+
+    errorFields.innerHTML = `
+        ${!validFirstName ? "<li>First Name</li>" : ""}
+        ${!validLastName ? "<li>Last Name</li>" : ""}
+        ${!validEmail || !validConfirmEmail ? "<li>Email</li>" : ""}
+        ${!validPhone ? "<li>Phone Number</li>" : ""}
+        ${!validAddress ? "<li>Address</li>" : ""}
+        ${!serviceSelected ? "<li>Services</li>" : ""}
+    `;
+}

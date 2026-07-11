@@ -61,7 +61,7 @@ h2.site-header {
 }
 
 h2.site-header:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     color: white;
 
     transition: transform 0.2s, color 0.2s;

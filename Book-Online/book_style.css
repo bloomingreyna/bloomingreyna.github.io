@@ -1,12 +1,20 @@
 #form-box {
     display: grid;
     justify-content: center;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: repeat(6, 12%);
     column-gap: 20px;
     row-gap: 20px;
     width: 50vw;
     height: min-content;
     text-wrap-mode: nowrap;
+}
+
+.long-span {
+    grid-column: span 3;
+}
+
+.short-span {
+    grid-column: span 5;
 }
 
 #checkbox-holder {
@@ -53,6 +61,12 @@
     display: none;
 }
 
+#checkbox-holder {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 5px;
+}
+
 @media (max-aspect-ratio: 3/2) {
     #form-box {
         width: 95vw;
@@ -72,8 +86,7 @@
         grid-template-columns: auto;
     }
 
-    #checkbox-holder {
-        display: grid;
-        grid-template-columns: auto auto;
+    .long-span, .short-span {
+        grid-column: span 6;
     }
 }
