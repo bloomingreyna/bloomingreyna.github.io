@@ -48,5 +48,6 @@
     #intro-image {
         flex: 1;
         min-width: 0px;
+        object-position: 15% 20%;
     }
 }

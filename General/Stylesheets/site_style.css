@@ -4,9 +4,15 @@ html {
     font-size: 18px;
 }
 
+@media (max-aspect-ratio: 9/16) {
+    html {
+        font-size: 16.5px;
+    }
+}
+
 body {
-    /* 0, 0, 0, 0.85 */
-    background-image: linear-gradient(rgba(20, 24, 24, 0.9)), url(../Images/marble.jpg);
+    /* 20, 24, 24, 0.9  <-- linear-gradient */
+    background-color: rgb(249, 252, 255);
     /* , url(../Images/marble.jpg) */
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,31 +23,46 @@ h1, h2, h3, h4, h5, h6 {
     font-family: LOVELO;
 }
 
+h1.on-white {
+    -webkit-text-stroke-width: max(1px, 0.02rem);
+    -webkit-text-stroke-color: black;
+}
+
+h2.on-white {
+    -webkit-text-stroke-width: max(1px, 0.015rem);
+    -webkit-text-stroke-color: black;
+}
+
 p, li, label {
     font-family: Lato;
-    color: white;
+    /* color: white; */
 }
 
 label {
-    color: white;
+    /* color: white; */
     font-size: 1.25rem;
 }
 
-.rainbow-text {
-    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, purple);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+.yellow-text {
+    color: rgb(155, 101, 0);
 }
 
 hr {
-    border-color: rgb(239, 214, 52);
+    border-color: rgb(155, 101, 0);
     width: 100%;
     max-height: 1px;
 }
 
 a {
     text-decoration: none underline;
-    color: rgb(0, 166, 255);
+    color: rgb(0, 93, 143);
+}
+
+.rainbow-text {
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, purple);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 section {
@@ -60,8 +81,8 @@ input {
     border-style: solid;
     border-radius: 6.7px;
 
-    background-color: rgba(87, 87, 87, 0.75);
-    color: white;
+    background-color: rgb(213, 213, 213);
+    color: black;
 
     font-family: Lato;
     font-size: 1rem;
@@ -76,7 +97,6 @@ footer {
     background-size: cover;
     background-attachment: fixed;
 
-
     color: white;
     font-style: normal;
 
@@ -89,4 +109,46 @@ footer {
 
 footer a {
     color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(32, 40, 45);
+    }
+
+    h1.on-white, h2.on-white {
+        -webkit-text-stroke-width: unset;
+        -webkit-text-stroke-color: unset;
+    }
+
+    p, li, label {
+        font-family: Lato;
+        color: white;
+    }
+
+    label {
+        color: white;
+        font-size: 1.25rem;
+    }
+
+    .yellow-text {
+        color: rgb(239, 214, 52);
+    }
+
+    hr {
+        border-color: rgb(239, 214, 52);
+        width: 100%;
+        max-height: 1px;
+    }
+
+    a {
+        text-decoration: none underline;
+        color: rgb(0, 166, 255);
+    }
+
+    input {
+        background-color: rgb(79, 79, 79);
+        border-color: rgb(157, 157, 157);
+        color: white;
+    }
 }

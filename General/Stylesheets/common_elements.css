@@ -16,7 +16,7 @@ button {
     border-style: solid;
     border-radius: 6.7px;
 
-    background-color: rgb(20, 24, 50);
+    background-color: rgb(42, 42, 119);
     color: white;
 
     box-shadow: 0px 0px 5px black;
@@ -29,7 +29,7 @@ button {
 
     cursor: pointer;
 
-    transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s;
 }
 
 button:hover {
@@ -54,4 +54,12 @@ div.floating-box {
 
 h1.floating-box, h2.floating-box {
     color: rgb(239, 214, 52);
+}
+
+@media (prefers-color-scheme: dark) {
+    button {
+        background-color: rgb(45, 53, 98);
+        color: white;
+        border-color: rgb(239, 214, 52);
+    }
 }

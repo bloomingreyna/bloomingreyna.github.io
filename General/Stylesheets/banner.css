@@ -33,12 +33,12 @@
 
     .banner-title {
         font-size: min(15cqh, 6.5vw);
-        -webkit-text-stroke-width: min(0.2cqh, 0.1vw);
+        -webkit-text-stroke-width: max(1px, 0.02em);
     }
 
     .banner-subtitle {
         font-size: min(7.5cqh, 3.5vw);
-        -webkit-text-stroke-width: min(0.2cqh, 0.1vw);
+        -webkit-text-stroke-width: max(1px, 0.02em);
     }
 }
 
@@ -52,11 +52,9 @@
 
     .banner-title {
         font-size: min(15cqh, 9.5vw);
-        -webkit-text-stroke-width: min(0.2cqh, 0.2vw);
     }
 
     .banner-subtitle {
         font-size: min(7.5cqh, 5vw);
-        -webkit-text-stroke-width: min(0.2cqh, 0.2vw);
     }
 }

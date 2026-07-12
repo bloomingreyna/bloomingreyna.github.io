@@ -8,17 +8,18 @@
     border-style: solid;
     border-radius: 6.7px;
 
-    width: min(25rem, 40vw);
+    width: min(25rem, 45vw);
 }
 
 @container offer-container {
     .offer-box h1 {
         text-align: center;
-        font-size: min(2rem, 10cqw);
+        font-size: min(1.75rem, 10.75cqw);
+        text-wrap-mode: nowrap;
     }
 }
 
-@media (max-aspect-ratio: 5/4) {
+@media (max-aspect-ratio: 1) {
     #offer-holder {
         flex-direction: column;
         gap: 20px;

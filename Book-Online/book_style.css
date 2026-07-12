@@ -1,8 +1,11 @@
 #form-box {
+    container-name: form-container;
+    container-type: inline-size;
+
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(6, 12%);
-    column-gap: 30px;
+    column-gap: min(30px, 5%);
     row-gap: 20px;
     width: 50vw;
     height: min-content;
@@ -90,6 +93,6 @@
     }
 
     .long-span, .short-span {
-        grid-column: span 6;
+        grid-column: span 1;
     }
 }
