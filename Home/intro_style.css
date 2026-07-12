@@ -1,5 +1,5 @@
 #intro {
-    align-items: start;
+    align-items: center;
 }
 
 #intro-image {
@@ -24,13 +24,13 @@
     width: min-content;
 }
 
-@media (max-aspect-ratio: 3/2) {
+@media (max-aspect-ratio: 5/4) {
     #intro {
         flex-direction: column;
     }
 
     #intro-textbox {
-        width: auto;
+        width: 87.5vw;
     }
 
     #call-to-action-column {
@@ -42,7 +42,7 @@
     }
 
     #dynamic-intro-box {
-        width: 100%;
+        width: 87.5vw;
     }
 
     #intro-image {

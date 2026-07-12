@@ -43,7 +43,7 @@
 }
 
 /* Aspect ratio layout query */
-@media (max-aspect-ratio: 9/16) {
+@media (max-aspect-ratio: 14/16) {
     .page-banner {
         flex-direction: column;
         height: 25rem;

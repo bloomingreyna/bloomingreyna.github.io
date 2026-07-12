@@ -1,0 +1,30 @@
+.offer-box {
+    container-name: offer-container;
+    container-type: inline-size;
+
+    background-color: rgba(0, 0, 0, 0.75);
+    border-width: 2px;
+    border-color: rgb(239, 214, 52);
+    border-style: solid;
+    border-radius: 6.7px;
+
+    width: min(25rem, 40vw);
+}
+
+@container offer-container {
+    .offer-box h1 {
+        text-align: center;
+        font-size: min(2rem, 10cqw);
+    }
+}
+
+@media (max-aspect-ratio: 5/4) {
+    #offer-holder {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .offer-box {
+        width: 87.5vw;
+    }
+}

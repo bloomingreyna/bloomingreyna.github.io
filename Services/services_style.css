@@ -1,5 +1,5 @@
 #services-column {
-    width: 75%;
+    width: 75vw;
 }
 
 .service-content-description {
@@ -24,7 +24,11 @@
     }
 }
 
-@media (max-aspect-ratio: 3/2) {
+@media (max-aspect-ratio: 5/4) {
+    #services-column {
+        width: 87.5vw;
+    }
+
     .service-content-description {
         flex-direction: column;
     }
