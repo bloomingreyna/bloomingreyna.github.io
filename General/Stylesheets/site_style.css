@@ -5,18 +5,19 @@ html {
 }
 
 body {
-    /* 1, 0, 25, 0.85 */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85)), url(../Images/marble.jpg);
+    /* 0, 0, 0, 0.85 */
+    background-image: linear-gradient(rgba(20, 24, 24, 0.9)), url(../Images/marble.jpg);
+    /* , url(../Images/marble.jpg) */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-h1, h2, h3, h4, h5, h6, label {
+h1, h2, h3, h4, h5, h6 {
     font-family: LOVELO;
 }
 
-p, li {
+p, li, label {
     font-family: Lato;
     color: white;
 }
@@ -52,10 +53,12 @@ section {
 }
 
 input {
-    border-width: 0px;
-    border-bottom-width: 2px;
-    border-color: rgb(239, 214, 52);
+    border-width: 1.5px;
+    /* border-bottom-width: 2px;
+    border-color: rgb(239, 214, 52); */
+    border-color: rgb(135, 135, 135);
     border-style: solid;
+    border-radius: 6.7px;
 
     background-color: rgba(87, 87, 87, 0.75);
     color: white;

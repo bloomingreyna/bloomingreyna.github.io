@@ -2,7 +2,7 @@
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(6, 12%);
-    column-gap: 20px;
+    column-gap: 30px;
     row-gap: 20px;
     width: 50vw;
     height: min-content;
@@ -17,6 +17,10 @@
     grid-column: span 5;
 }
 
+.text-input-label {
+    margin-bottom: 5px;
+}
+
 #checkbox-holder {
     display: flex;
     flex-direction: column;
@@ -29,7 +33,6 @@
 }
 
 .checkbox-label {
-    font-family: Lato;
     font-size: 0.85rem;
     margin-left: 0.2rem;
 }
