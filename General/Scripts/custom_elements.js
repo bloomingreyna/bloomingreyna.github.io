@@ -21,7 +21,7 @@ class SiteHeader extends HTMLElement {
                 <h1 class="site-header" style="margin-right: 1rem;"><a href="https://www.weldiscleaning.com">WELDI'S CLEANING</a></h1>
                 <h2 class="site-header header-item" style="color: ${this.checkPage(this.homePath) ? "white" : "auto"};"><a href="/index.html">HOME</a></h2>
                 <h2 class="site-header header-item" style="color: ${this.checkPage(this.servicesPath) ? "white" : "auto"};"><a href="/docs/services.html">SERVICES</a></h2>
-                <h2 class="site-header header-item" style="color: ${this.checkPage(this.serviceAreasPath) ? "white" : "auto"};">SERVICE AREAS</h2>
+                <h2 class="site-header header-item" style="color: ${this.checkPage(this.serviceAreasPath) ? "white" : "auto"};"><a href="/docs/service-areas.html">SERVICE AREAS</a></h2>
                 <h2 class="site-header header-item" style="color: ${this.checkPage(this.bookOnlinePath) ? "white" : "auto"};"><a href="/docs/book-online.html">BOOK ONLINE</a></h2>
                 <img id="dropdown-arrow" class="site-header" src="../General/Images/hamburger.webp" alt="Menu dropdown">
             </header>
@@ -31,7 +31,7 @@ class SiteHeader extends HTMLElement {
                 <hr>
                 <h2 class="site-header" style="color: ${this.checkPage(this.servicesPath) ? "white" : "auto"};"><a href="/docs/services.html">SERVICES</a></h2>
                 <hr>
-                <h2 class="site-header" style="color: ${this.checkPage(this.serviceAreasPath) ? "white" : "auto"};">SERVICE AREAS</h2>
+                <h2 class="site-header" style="color: ${this.checkPage(this.serviceAreasPath) ? "white" : "auto"};"><a href="/docs/service-areas.html">SERVICE AREAS</a></h2>
                 <hr>
                 <h2 class="site-header" style="color: ${this.checkPage(this.bookOnlinePath) ? "white" : "auto"};"><a href="/docs/book-online.html">BOOK ONLINE</a></h2>
             </div>
@@ -39,6 +39,25 @@ class SiteHeader extends HTMLElement {
     }
 }
 customElements.define("site-header", SiteHeader);
+
+class Banner extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        this.innerHTML = `
+            <section class="page-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35)), url(${this.getAttribute("data-image")});">
+                <img class="banner-element banner-logo" src="../General/Images/weldigold.png" alt="Weldi's Cleaning logo">
+                <div class="column-container banner-element" style="justify-content: center; align-items: center;">
+                    <h1 class="banner-title">${this.getAttribute("data-title")}</h1>
+                    <h2 class="banner-subtitle"><i>${this.getAttribute("data-subtitle")}</i></h2>
+                </div>
+            </section>
+        `;
+    }
+}
+customElements.define("site-banner", Banner);
 
 class SiteFooter extends HTMLElement {
     constructor() {
