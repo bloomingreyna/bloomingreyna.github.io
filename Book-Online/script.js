@@ -55,7 +55,7 @@ form.addEventListener('submit', e => {
 
     let requestBody = new FormData(form);
     
-    submitButton.innerHTML = "SUBMITTING..."
+    submitButton.innerHTML = "SUBMITTING...";
     submitButton.style.fontSize = "1rem";
     fetch(scriptURL, {method: 'POST', body: requestBody})
     .then(response => {
