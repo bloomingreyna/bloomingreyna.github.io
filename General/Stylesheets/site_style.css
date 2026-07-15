@@ -113,7 +113,7 @@ footer a {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: rgb(32, 40, 45);
+        background-color: rgb(26, 34, 39);
     }
 
     h1.on-white, h2.on-white {

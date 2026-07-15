@@ -1,0 +1,53 @@
+#service-areas {
+    padding-inline: 6.25vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65)), url(../General/Images/bay.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#service-areas p, #service-areas li {
+    color: white;
+}
+
+#service-areas h1 {
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: 0px;
+}
+
+#service-areas-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#service-areas-text {
+    flex: 1;
+}
+
+#service-areas-image {
+    width: 37.5vw;
+    border-radius: 6.7px;
+    box-shadow: 0px 0px 5px black;
+    aspect-ratio: 1.75;
+}
+
+#no-worries {
+    width: min(35rem, 65vw);
+}
+
+@media (max-aspect-ratio: 5/4) {
+    #service-areas-content {
+        flex-direction: column;
+    }
+
+    #no-worries {
+        width: unset;
+        flex: 1;
+    }
+
+    #service-areas-image {
+        display: none;
+    }
+}
