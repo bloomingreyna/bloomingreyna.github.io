@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Weldi's Cleaning - Book Online</title>
+        <link rel="shortcut icon" href="../General/Images/weldigold.png" type="image/x-icon">
+
+        <link rel="stylesheet" href="../General/Stylesheets/main.css">
+        <link rel="stylesheet" href="../Book-Online/book_style.css">
+
+        <script src="../General/Scripts/custom_elements.js" defer></script>
+        <script src="../Book-Online/script.js" defer></script>
+    </head>
+
+    <body>
+        <site-header></site-header>
+
+        <section class="page-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35)), url(../General/Images/car.webp);">
+            <img class="banner-element banner-logo" src="../General/Images/weldigold.png" alt="">
+            <div class="column-container banner-element" style="justify-content: center; align-items: center;">
+                <h1 class="banner-title">BOOKING FORM</h1>
+                <h2 class="banner-subtitle"><i>We hope to see you soon!</i></h2>
+            </div>
+        </section>
+
+        <section id="booking-form">
+            <form id="form" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                <div id="form-box" class="floating-box">
+                    <div class="column-container long-span">
+                        <label class="text-input-label">First Name<span style="color: red;"> *</span></label>
+                        <input type="text" name="First Name" id="client-first-name-input">
+                        <p id="first-name-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">This field is required.</p>
+                    </div>
+                    <div class="column-container long-span">
+                        <label class="text-input-label">Last Name<span style="color: red;"> *</span></label>
+                        <input type="text" name="Last Name" id="client-last-name-input">
+                        <p id="last-name-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">This field is required.</p>
+                    </div>
+                    <div class="column-container long-span">
+                        <label class="text-input-label">Email<span style="color: red;"> *</span></label>
+                        <input type="text" name="Email" id="client-email-input">
+                        <p id="email-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">Invalid email address.</p>
+                    </div>
+                    <div class="column-container long-span">
+                        <label class="text-input-label">Confirm Email<span style="color: red;"> *</span></label>
+                        <input type="text" id="client-confirm-email-input">
+                        <p id="confirm-email-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">Emails must match.</p>
+                    </div>
+                    <div class="column-container long-span">
+                        <label class="text-input-label">Phone</label>
+                        <input type="tel" name="Phone" id="client-phone-number-input">
+                        <p id="phone-number-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">Invalid phone number.</p>
+                    </div>
+                    <div class="column-container long-span">
+                        <label class="text-input-label">Address<span style="color: red;"> *</span></label>
+                        <input type="text" name="Address" id="client-address-input">
+                        <p id="address-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">This field is required.</p>
+                    </div>
+                    <div class="column-container short-span">
+                        <label>Services<span style="color: red;"> *</span></label>
+                        <div id="checkbox-holder">
+                            <div class="row-container">
+                                <input id="window-check" class="service-check" type="checkbox" value="Window Cleaning">
+                                <label class="checkbox-label" for="window-check">Window Cleaning</label>
+                            </div>
+                            <div class="row-container">
+                                <input id="auto-check" class="service-check" type="checkbox" value="Auto Detailing">
+                                <label class="checkbox-label" for="auto-check">Auto Detailing</label>
+                            </div>
+                            <div class="row-container">
+                                <input id="solar-check" class="service-check" type="checkbox" value="Solar Panel Cleaning">
+                                <label class="checkbox-label" for="solar-check">Solar Panel Cleaning</label>
+                            </div>
+                            <div class="row-container">
+                                <input id="gutter-check" class="service-check" type="checkbox" value="Gutter Cleaning">
+                                <label class="checkbox-label" for="gutter-check">Gutter Cleaning</label>
+                            </div>
+                            <div class="row-container">
+                                <input id="lawn-check" class="service-check" type="checkbox" value="Lawn Care">
+                                <label class="checkbox-label" for="lawn-check">Lawn Care</label>
+                            </div>
+                            <div class="row-container">
+                                <input id="hedge-check" class="service-check" type="checkbox" value="Hedge Trimming">
+                                <label class="checkbox-label" for="hedge-check">Hedge Trimming</label>
+                            </div>
+                            <input id="services-value" name="Services" style="display: none;">
+                        </div>
+                        <p id="service-error" class="input-error"><img class="error-img" src="../General/Images/alert-error.svg">Select at least one service.</p>
+                    </div>
+                </div>
+
+                <div id="summary-column" class="column-container" style="gap: 20px; align-items: center;">
+                    <div class=floating-box>
+                        <h2 class="floating-box on-white">ORDER SUMMARY</h1>
+                        <hr>
+                        <p>You are booking a quote for the following services:</p>
+                        <ul id="service-list">
+                            <li style="color: grey;"><i>No services selected...</i></li>
+                        </ul>
+                        <hr>
+                        <p>We will first contact you via your preferred mode of contact (email by default) and arrange details depending on your desired services. We will not come to your provided address without first explicitly communicating a date and time. It is also within your legal rights to refuse the estimate you receive at any point <i>before</i> receiving the service.</p>
+                        <br>
+                        <p>We hope to see you soon!</p>
+                    </div>
+                    <div class="row-container">
+                        <input id="prefers-phone" type="checkbox">
+                        <input id="prefers-phone-value" name="Prefers Phone Communication" style="display: none;">
+                        <label id="preference-label" class="checkbox-label" for="prefers-phone">I would prefer to communicate via phone call and/or text messaging (standard data rates may apply).</label>
+                    </div>
+                    <button id="submit-button" type="submit" style="width: 10rem; height: 3.25rem;">SUBMIT</button>
+                    <div id="error-box">
+                        <p>The following fields are invalid:</p>
+                        <hr style="border-color: rgb(148, 11, 11);">
+                        <ul id="error-fields"></ul>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <site-footer></site-footer>
+    </body>
+</html>

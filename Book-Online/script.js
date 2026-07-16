@@ -60,7 +60,7 @@ form.addEventListener('submit', e => {
     fetch(scriptURL, {method: 'POST', body: requestBody})
     .then(response => {
         alert('Booking form submitted! Please check your email for confirmation.\n\nDismiss this message to go back to the home page.', response);
-        window.location.replace("/index.html");
+        window.location.replace("/");
     })
     .catch(error => {
         alert('Error!', error.message);

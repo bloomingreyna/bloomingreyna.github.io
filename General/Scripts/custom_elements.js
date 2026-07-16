@@ -1,8 +1,8 @@
 class SiteHeader extends HTMLElement {
-    homePath = "/index.html";
-    servicesPath = "/docs/services.html";
-    aboutUsPath = "/docs/about-us.html";
-    bookOnlinePath = "/docs/book-online.html";
+    homePath = "/";
+    servicesPath = "/services/";
+    aboutUsPath = "/about-us/";
+    bookOnlinePath = "/book-online/";
 
     constructor() {
         super();
@@ -19,21 +19,21 @@ class SiteHeader extends HTMLElement {
         this.innerHTML = `
             <header id="site-header" class="site-header">
                 <h1 class="site-header" style="margin-right: 1rem;"><a href="https://www.weldiscleaning.com">WELDI'S CLEANING</a></h1>
-                <h2 class="site-header header-item" style="color: ${this.checkPage(this.homePath) ? "white" : "auto"};"><a href="/index.html">HOME</a></h2>
-                <h2 class="site-header header-item" style="color: ${this.checkPage(this.aboutUsPath) ? "white" : "auto"};"><a href="/docs/about-us.html">ABOUT US</a></h2>
-                <h2 class="site-header header-item" style="color: ${this.checkPage(this.servicesPath) ? "white" : "auto"};"><a href="/docs/services.html">SERVICES</a></h2>
-                <h2 class="site-header header-item" style="color: ${this.checkPage(this.bookOnlinePath) ? "white" : "auto"};"><a href="/docs/book-online.html">BOOK ONLINE</a></h2>
+                <h2 class="site-header header-item" style="color: ${this.checkPage(this.homePath) ? "white" : "auto"};"><a href="${this.homePath}">HOME</a></h2>
+                <h2 class="site-header header-item" style="color: ${this.checkPage(this.aboutUsPath) ? "white" : "auto"};"><a href="${this.aboutUsPath}">ABOUT US</a></h2>
+                <h2 class="site-header header-item" style="color: ${this.checkPage(this.servicesPath) ? "white" : "auto"};"><a href="${this.servicesPath}">SERVICES</a></h2>
+                <h2 class="site-header header-item" style="color: ${this.checkPage(this.bookOnlinePath) ? "white" : "auto"};"><a href="${this.bookOnlinePath}">BOOK ONLINE</a></h2>
                 <img id="dropdown-arrow" class="site-header" src="../General/Images/hamburger.webp" alt="Menu dropdown">
             </header>
             <div id="dropdown-menu" class="floating-box">
                 <div id="dropdown-hover-validation"></div>
-                <h2 class="site-header" style="color: ${this.checkPage(this.homePath) ? "white" : "auto"};"><a href="/index.html">HOME</a></h2>
+                <h2 class="site-header" style="color: ${checkCurrentPath() ? "white" : "auto"};"><a href="${this.homePath}">HOME</a></h2>
                 <hr>
-                <h2 class="site-header" style="color: ${this.checkPage(this.aboutUsPath) ? "white" : "auto"};"><a href="/docs/about-us.html">ABOUT US</a></h2>
+                <h2 class="site-header" style="color: ${this.checkPage(this.aboutUsPath) ? "white" : "auto"};"><a href="${this.aboutUsPath}">ABOUT US</a></h2>
                 <hr>
-                <h2 class="site-header" style="color: ${this.checkPage(this.servicesPath) ? "white" : "auto"};"><a href="/docs/services.html">SERVICES</a></h2>
+                <h2 class="site-header" style="color: ${this.checkPage(this.servicesPath) ? "white" : "auto"};"><a href="${this.servicesPath}">SERVICES</a></h2>
                 <hr>
-                <h2 class="site-header" style="color: ${this.checkPage(this.bookOnlinePath) ? "white" : "auto"};"><a href="/docs/book-online.html">BOOK ONLINE</a></h2>
+                <h2 class="site-header" style="color: ${this.checkPage(this.bookOnlinePath) ? "white" : "auto"};"><a href="${this.bookOnlinePath}">BOOK ONLINE</a></h2>
             </div>
         `;
     }
@@ -69,10 +69,10 @@ class SiteFooter extends HTMLElement {
             <footer>
                 <div class="column-container" style="gap: 5px;">
                     <h1>SITE PAGES</h1>
-                    <p><a href="/index.html">Home</a></p>
-                    <p><a href="/docs/about-us.html">About Us</a></p>
-                    <p><a href="/docs/services.html">Services</a></p>
-                    <p><a href="/docs/book-online.html">Book Online</a></p>
+                    <p><a href="/">Home</a></p>
+                    <p><a href="/about-us/">About Us</a></p>
+                    <p><a href="/services/">Services</a></p>
+                    <p><a href="/book-online/">Book Online</a></p>
                 </div>
 
                 <div class="column-container" style="gap: 5px;">
@@ -107,4 +107,8 @@ function updateHeaderItems() {
             item.style.display = "block";
         }
     }
+}
+
+function checkCurrentPath(path) {
+    return window.location.pathname;
 }
